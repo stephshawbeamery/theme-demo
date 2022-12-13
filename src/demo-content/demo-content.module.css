@@ -1,0 +1,49 @@
+:root {
+  --hero-animation-duration: 7.5s;
+}
+
+[data-animations="none"] {
+  --hero-animation-duration: 0s;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero {
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient var(--hero-animation-duration) ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  padding: 10px;
+  font-size: 5rem;
+}
+
+.content {
+  max-width: 600px;
+  padding: 10px;
+}

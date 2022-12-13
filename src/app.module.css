@@ -1,0 +1,83 @@
+:root {
+  /* Theme colors */
+  --primary-color: #432db2;
+  --secondary-color: #f15852;
+  --font-color: #150e3f;
+  --bg-color: #ffffff;
+
+  /* Font size */
+  --base-font-size: 14px;
+  --font-size-xl: calc(var(--base-font-size) * 3);
+  --font-size-lg: calc(var(--base-font-size) * 2);
+  --font-size-reg: calc(var(--base-font-size) * 1);
+  --font-size-sm: calc(var(--base-font-size) * 0.8);
+
+  /* Animations */
+  --base-transition-duration: 300ms;
+}
+
+[data-theme="dark"] {
+  --primary-color: #432db2;
+  --secondary-color: #f15852;
+  --font-color: #ffffff;
+  --bg-color: #150e3f;
+}
+
+[data-animations="none"] {
+  --base-transition-duration: 0s;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  font-size: var(--font-size-reg);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+  padding: 5px 10px;
+  color: white;
+  font-weight: bold;
+  transition: all ease var(--base-transition-duration);
+}
+
+.navOptions {
+  display: flex;
+  gap: 4px;
+}
+
+.button {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: var(--font-size-reg);
+  font-weight: 600;
+  line-height: 1.8rem;
+  letter-spacing: 0px;
+  text-decoration: none;
+  padding: 2px 4px;
+  opacity: 1;
+  white-space: nowrap;
+  width: min-content;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: inherit;
+  background-color: rgb(241, 241, 243);
+  color: rgb(31, 31, 35);
+}
+
+.button:hover,
+.button:active {
+  background-color: rgb(188, 188, 195);
+}
