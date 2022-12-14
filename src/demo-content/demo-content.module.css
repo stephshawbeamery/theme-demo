@@ -1,11 +1,3 @@
-:root {
-  --hero-animation-duration: 7.5s;
-}
-
-[data-animations="none"] {
-  --hero-animation-duration: 0s;
-}
-
 .container {
   width: 100%;
   height: 100%;
@@ -31,7 +23,7 @@
   height: 300px;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
-  animation: gradient var(--hero-animation-duration) ease infinite;
+  animation: gradient var(--transition-duration-xl) ease infinite;
   display: flex;
   align-items: center;
   justify-content: center;

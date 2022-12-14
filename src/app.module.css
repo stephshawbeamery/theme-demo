@@ -14,17 +14,18 @@
 
   /* Animations */
   --base-transition-duration: 300ms;
+  --transition-duration-reg: var(--base-transition-duration);
+  --transition-duration-xl: 7.5s;
 }
 
 [data-theme="dark"] {
-  --primary-color: #432db2;
-  --secondary-color: #f15852;
   --font-color: #ffffff;
   --bg-color: #150e3f;
 }
 
 [data-animations="none"] {
-  --base-transition-duration: 0s;
+  --transition-duration-reg: 0s;
+  --transition-duration-xl: 0s;
 }
 
 .app {
@@ -36,6 +37,8 @@
   background-color: var(--bg-color);
   color: var(--font-color);
   font-size: var(--font-size-reg);
+
+  transition: all ease-in-out var(--base-transition-duration);
 }
 
 .nav {
@@ -46,7 +49,6 @@
   padding: 5px 10px;
   color: white;
   font-weight: bold;
-  transition: all ease var(--base-transition-duration);
 }
 
 .navOptions {
